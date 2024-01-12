@@ -1,16 +1,17 @@
 {
   "name": "dbs-backup-script",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MEGA Drive databases backup upload script",
   "main": "index.ts",
   "scripts": {
-    "upload:mongo": "ts-node mongo/upload.ts",
-    "upload:mysql": "ts-node mysql/upload.ts",
-    "upload:postgres": "ts-node postgres/upload.ts"
+    "upload:mongo": "cross-env DB=mongo ts-node ./scripts/index.ts",
+    "upload:mysql": "cross-env DB=mysql ts-node ./scripts/index.ts",
+    "upload:postgres": "cross-env DB=postgres ts-node ./scripts/index.ts"
   },
   "author": "Jakub Cieślik",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "megajs": "^1.1.7",
     "ts-node": "^10.9.2",

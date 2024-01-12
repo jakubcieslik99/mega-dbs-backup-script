@@ -1,4 +1,4 @@
 node_modules/
-backups/
+backups_*/
 .env
 .DS_Store

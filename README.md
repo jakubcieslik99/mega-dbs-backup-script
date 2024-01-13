@@ -1,16 +1,16 @@
 ## Databases Backup Script ⚙️
 
-📌 Bash script and Node.js TypeScript job that creates dumps of MongoDB, MySQL and PostgreSQL databases on Linux environment,
-packs them and uploads to MEGA Drive cloud.
+📌 Bash script and Node.js TypeScript job that creates dumps of MongoDB, MySQL and PostgreSQL databases in a Linux
+environment, packs them and uploads to MEGA Drive cloud.
 
 ![GitHub top language](https://img.shields.io/github/languages/top/jakubcieslik99/dbs-backup-script)
 ![GitHub repo size](https://img.shields.io/github/repo-size/jakubcieslik99/dbs-backup-script)
 
 ## Initial requirements
 
-It is recommended to run this backup script for all the given databases, on Linux environment, as a cron job.
+It is recommended to run this backup script for all the given databases, in a Linux environment, as a cron job.
 
-The recommended location for the script, that will work out of the box is `/home/{user}` directory on Linux environment.
+The recommended location for the script, that will work out of the box is `/home/{user}` directory in a Linux environment.
 
 The script that backups all three databases is located in `/scripts` directory and called `backup.sh`.
 

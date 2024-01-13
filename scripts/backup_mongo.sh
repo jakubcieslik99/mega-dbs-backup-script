@@ -6,6 +6,12 @@ URI=mongodb://$MONGO_USER:$MONGO_PASSWORD@localhost:27017
 UPLOAD=~/dbs-backup-script/backups_mongo
 DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
+if [ ! -d "$UPLOAD" ]; then
+    mkdir -p "$UPLOAD"
+    chmod -R 777 "$UPLOAD"
+    echo "Directory backups_mongo created locally."
+fi
+
 echo "MongoDB backup started..."
 
 mongodump --uri="$URI" --out="$UPLOAD/$DATE"

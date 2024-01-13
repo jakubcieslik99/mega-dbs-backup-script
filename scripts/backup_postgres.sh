@@ -8,6 +8,12 @@ DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
 export PGPASSWORD
 
+if [ ! -d "$UPLOAD" ]; then
+    mkdir -p "$UPLOAD"
+    chmod -R 777 "$UPLOAD"
+    echo "Directory backups_postgres created locally."
+fi
+
 echo "PostgreSQL backup started..."
 
 pg_dumpall -U "$POSTGRES_USER" -f "$UPLOAD/$DATE.sql"

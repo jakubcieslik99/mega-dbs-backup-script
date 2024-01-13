@@ -5,6 +5,12 @@ source ~/dbs-backup-script/.env
 UPLOAD=~/dbs-backup-script/backups_mysql
 DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
+if [ ! -d "$UPLOAD" ]; then
+    mkdir -p "$UPLOAD"
+    chmod -R 777 "$UPLOAD"
+    echo "Directory backups_mysql created locally."
+fi
+
 echo "MySQL backup started..."
 
 mysqldump -u "$MYSQL_USER" -p "$MYSQL_PASSWORD" --all-databases > "$UPLOAD/$DATE.sql"

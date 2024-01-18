@@ -1,6 +1,6 @@
 {
   "name": "dbs-backup-script",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "MEGA Drive databases backup upload script",
   "main": "index.ts",
   "scripts": {
@@ -20,10 +20,10 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.2"
+    "prettier": "^3.2.4"
   }
 }

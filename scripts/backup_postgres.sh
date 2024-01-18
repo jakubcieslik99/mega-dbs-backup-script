@@ -16,7 +16,7 @@ fi
 
 echo "PostgreSQL backup started..."
 
-pg_dumpall -U "$POSTGRES_USER" -f "$UPLOAD/$DATE.sql"
+pg_dumpall -U "$POSTGRES_USER" -f "$UPLOAD/$DATE.sql" --no-role-passwords
 
 tar -cvpzf $UPLOAD/postgres_backup_$DATE.tar.gz -C $UPLOAD $DATE.sql
 

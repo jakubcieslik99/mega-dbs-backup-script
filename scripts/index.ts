@@ -1,6 +1,7 @@
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
+import * as fs from 'fs'
+import { ReadStream } from 'fs'
 import { Storage } from 'megajs'
-import fs, { ReadStream } from 'fs'
 
 dotenv.config({ path: './.env' })
 const BACKUPS_DIR = `./backups_${process.env.DB}`.trim()

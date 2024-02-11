@@ -1,7 +1,8 @@
 {
   "name": "dbs-backup-script",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "MEGA Drive databases backup upload script",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
     "upload:mongo": "cross-env DB=mongo tsx ./scripts/index.ts",

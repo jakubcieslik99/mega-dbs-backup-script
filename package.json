@@ -16,9 +16,9 @@
   "dependencies": {
     "@types/node": "^20.11.17",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.4.1",
+    "dotenv": "^16.4.2",
     "megajs": "^1.1.7",
-    "tsx": "^4.7.0",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

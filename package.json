@@ -14,12 +14,12 @@
   "author": "Jakub Cieślik",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^20.11.24",
+    "@types/node": "^20.12.8",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
-    "megajs": "^1.1.7",
-    "tsx": "^4.7.1",
-    "typescript": "^5.3.3"
+    "megajs": "^1.2.2",
+    "tsx": "^4.9.2",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",

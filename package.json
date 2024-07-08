@@ -1,6 +1,6 @@
 {
   "name": "mega-dbs-backup-script",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "MEGA Drive databases backup upload script",
   "type": "module",
   "main": "index.ts",

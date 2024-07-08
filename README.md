@@ -1,4 +1,4 @@
-## Databases Backup Script ⚙️
+## Databases Backup Script to MEGA drive ⚙️
 
 📌 Bash script and Node.js TypeScript job that creates dumps of MongoDB, MySQL and PostgreSQL databases in a Linux
 environment, packs them and uploads to MEGA Drive cloud.

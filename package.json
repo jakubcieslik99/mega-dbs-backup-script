@@ -1,6 +1,6 @@
 {
-  "name": "dbs-backup-script",
-  "version": "1.3.2",
+  "name": "mega-dbs-backup-script",
+  "version": "1.4.0",
   "description": "MEGA Drive databases backup upload script",
   "type": "module",
   "main": "index.ts",
@@ -9,23 +9,25 @@
     "upload:mysql": "cross-env DB=mysql tsx ./scripts/index.ts",
     "upload:postgres": "cross-env DB=postgres tsx ./scripts/index.ts",
     "lint": "eslint . --ignore-path .gitignore --ext .js,.ts",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts)\"",
+    "update:all": "corepack up && pnpm update"
   },
   "author": "Jakub Cieślik",
-  "license": "ISC",
+  "license": "MIT",
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "dependencies": {
-    "@types/node": "^20.11.24",
+    "@types/node": "^20.14.10",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
-    "megajs": "^1.1.7",
-    "tsx": "^4.7.1",
-    "typescript": "^5.3.3"
+    "megajs": "^1.3.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.2"
   }
 }

@@ -91,8 +91,8 @@ const deleteFiles = async (storage: Storage, entriesToDelete: string[]) => {
 
   await storage.close()
   process.exit(0)
-})().catch(err => {
-  if (err instanceof Error) console.error(`[ERR]: ${err.message}`)
-  else console.error(`[ERR]: ${err}`)
+})().catch(error => {
+  if (error instanceof Error) console.error(`[ERR]: ${error.message}`)
+  else console.error(`[ERR]: ${error}`)
   process.exit(1)
 })

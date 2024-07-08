@@ -1,0 +1,33 @@
+name: Release on "main" branch repo push
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '.github/**'
+      - '**/.gitignore'
+      - '**/.eslintrc.json'
+      - '**/.prettierrc.json'
+      - '**/*.md'
+      - '**/LICENSE'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: CI/CD
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Get latest version from package.json
+        id: package_version
+        run: echo "VERSION=$(jq -r '.version' package.json)" >> $GITHUB_OUTPUT
+      - name: Create tag release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.package_version.outputs.VERSION }}
+          release_name: v${{ steps.package_version.outputs.VERSION }}
+          body: Release v${{ steps.package_version.outputs.VERSION }}

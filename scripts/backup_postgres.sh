@@ -24,7 +24,7 @@ rm -rf $UPLOAD/$DATE.sql
 
 cd ~/dbs-backup-script
 echo "Uploading PostgreSQL backup to MEGA Drive..."
-npm run upload:postgres
+pnpm run upload:postgres
 
 find $UPLOAD -type f -mmin +$((RETENTION_HOURS * 60)) -name 'postgres_backup_*.tar.gz' -delete
 

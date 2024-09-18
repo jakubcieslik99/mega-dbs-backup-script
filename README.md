@@ -14,7 +14,7 @@ The recommended location for the script, that will work out of the box is `/home
 
 The script that backups all three databases is located in `/scripts` directory and called `backup.sh`.
 
-You also have to provide proper environment variables in `.env` file.
+You also have to provide proper environment variables in `.env` file and use pnpm package manager.
 
 All information about environment variables can be found in the `Environment Variables` section.
 
@@ -61,25 +61,18 @@ All information about environment variables can be found in the `Environment Var
 ⚙️ To run the script, you will need to add the following environment variables to your .env file
 
 - `MONGO_USER`
-
 - `MONGO_PASSWORD`
 
 - `MYSQL_USER`
-
 - `MYSQL_PASSWORD`
 
 - `POSTGRES_USER`
-
 - `POSTGRES_PASSWORD`
 
 - `PROJECT_NAME`
-
 - `RETENTION_HOURS`
-
 - `MEGA_EMAIL`
-
 - `MEGA_PASSWORD`
-
 - `MEGA_USER_AGENT`
 
 ( ℹ️ - sample .env config file is provided in the script directory under the name `.env.sample` )

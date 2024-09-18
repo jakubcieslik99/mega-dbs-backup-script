@@ -21,7 +21,7 @@ rm -rf $UPLOAD/$DATE.sql
 
 cd ~/dbs-backup-script
 echo "Uploading MySQL backup to MEGA Drive..."
-npm run upload:mysql
+pnpm run upload:mysql
 
 find $UPLOAD -type f -mmin +$((RETENTION_HOURS * 60)) -name 'mysql_backup_*.tar.gz' -delete
 

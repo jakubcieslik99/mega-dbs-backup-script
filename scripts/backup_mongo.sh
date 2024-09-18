@@ -22,7 +22,7 @@ rm -rf $UPLOAD/$DATE
 
 cd ~/dbs-backup-script
 echo "Uploading MongoDB backup to MEGA Drive..."
-npm run upload:mongo
+pnpm run upload:mongo
 
 find $UPLOAD -type f -mmin +$((RETENTION_HOURS * 60)) -name 'mongo_backup_*.tar.gz' -delete
 

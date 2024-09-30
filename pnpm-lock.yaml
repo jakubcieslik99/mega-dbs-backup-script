@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@types/node':
-        specifier: ^20.16.5
-        version: 20.16.5
+        specifier: ^20.16.10
+        version: 20.16.10
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -18,8 +18,8 @@ importers:
         specifier: ^16.4.5
         version: 16.4.5
       megajs:
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: ^1.3.2
+        version: 1.3.2
       tsx:
         specifier: ^4.19.1
         version: 4.19.1
@@ -235,8 +235,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@20.16.5':
-    resolution: {integrity: sha512-VwYCweNo3ERajwy0IUlqqcyZ8/A7Zwa9ZP3MnENWcB11AejO+tLy3pu850goUW2FC/IJMdZUfKpX/yxL1gymCA==}
+  '@types/node@20.16.10':
+    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -594,8 +594,8 @@ packages:
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
-  megajs@1.3.1:
-    resolution: {integrity: sha512-Q41K5CnSfINwYFsXl0DH7Et05aEeOhxWHxP3VZeCoGVbdCiWqtKglO+zI0TI5rO3NBF1keEgpXCClp1OxgivZg==}
+  megajs@1.3.2:
+    resolution: {integrity: sha512-8inPyI49NhW8Gt7d0kNpDFiRmyv7GtJbSWQWXQcSDbWBrCJ1pHha96Ryd/4Rrx86R7MXPPGFb5k3zice0UQHpw==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -925,7 +925,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@20.16.5':
+  '@types/node@20.16.10':
     dependencies:
       undici-types: 6.19.8
 
@@ -1351,7 +1351,7 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
-  megajs@1.3.1:
+  megajs@1.3.2:
     dependencies:
       abort-controller: 3.0.0
       pumpify: 2.0.1

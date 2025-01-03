@@ -3,8 +3,8 @@
 📌 Bash script and Node.js TypeScript job that creates dumps of MongoDB, MySQL and PostgreSQL databases in a Linux
 environment, packs them and uploads to MEGA Drive cloud.
 
-![GitHub top language](https://img.shields.io/github/languages/top/jakubcieslik99/dbs-backup-script)
-![GitHub repo size](https://img.shields.io/github/repo-size/jakubcieslik99/dbs-backup-script)
+![GitHub top language](https://img.shields.io/github/languages/top/jakubcieslik99/mega-dbs-backup-script)
+![GitHub repo size](https://img.shields.io/github/repo-size/jakubcieslik99/mega-dbs-backup-script)
 
 ## Initial requirements
 
@@ -23,7 +23,7 @@ All information about environment variables can be found in the `Environment Var
 - Clone repository
 
 ```bash
-  git clone https://github.com/jakubcieslik99/dbs-backup-script.git
+  git clone https://github.com/jakubcieslik99/mega-dbs-backup-script.git
 ```
 
 ℹ️ Instructions for running script manually:
@@ -31,7 +31,7 @@ All information about environment variables can be found in the `Environment Var
 - Navigate to the `backup.sh` directory
 
 ```bash
-  cd dbs-backup-script/scripts
+  cd mega-dbs-backup-script/scripts
 ```
 
 - Run the script manually
@@ -52,7 +52,7 @@ All information about environment variables can be found in the `Environment Var
   crontab -e
 ```
 
-`0 5 * * * /full/path/to/dbs-backup-script/scripts/backup.sh >/dev/null 2>&1`
+`0 5 * * * /full/path/to/mega-dbs-backup-script/scripts/backup.sh >/dev/null 2>&1`
 
 - Save and exit the crontab file
 

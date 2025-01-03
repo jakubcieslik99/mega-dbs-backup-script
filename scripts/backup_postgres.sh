@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source ~/dbs-backup-script/.env
+source ~/mega-dbs-backup-script/.env
 
 PGPASSWORD=$POSTGRES_PASSWORD
-UPLOAD=~/dbs-backup-script/backups_postgres
+UPLOAD=~/mega-dbs-backup-script/backups_postgres
 DATE=$(date +%Y-%m-%d_%H-%M-%S)
 
 export PGPASSWORD
@@ -16,13 +16,14 @@ fi
 
 echo "PostgreSQL backup started..."
 
-pg_dumpall -U "$POSTGRES_USER" -f "$UPLOAD/$DATE.sql" --no-role-passwords
+#pg_dumpall -U "$POSTGRES_USER" -f "$UPLOAD/$DATE.sql" --no-role-passwords
+docker exec -t postgres pg_dumpall -U "$POSTGRES_USER" -f "/home/$DATE.sql" --no-role-passwords
 
 tar -cvpzf $UPLOAD/postgres_backup_$DATE.tar.gz -C $UPLOAD $DATE.sql
 
 rm -rf $UPLOAD/$DATE.sql
 
-cd ~/dbs-backup-script
+cd ~/mega-dbs-backup-script
 echo "Uploading PostgreSQL backup to MEGA Drive..."
 pnpm run upload:postgres
 

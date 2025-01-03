@@ -46,7 +46,7 @@ const prepareStorage = async () => {
 }
 
 const prepareStorageDirectory = async (storage: Storage) => {
-  const directoryName = process.env.PROJECT_NAME || 'dbs-backup-script'
+  const directoryName = process.env.PROJECT_NAME || 'mega-dbs-backup-script'
 
   const directory = storage.root.children?.find(path => path.name === directoryName)
   if (directory) return directory

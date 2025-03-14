@@ -4,7 +4,7 @@ import { ReadStream } from 'fs'
 import { Storage } from 'megajs'
 
 dotenv.config({ path: './.env' })
-const BACKUPS_DIR = `./backups_${process.env.DB}`.trim()
+const BACKUPS_DIR = `./data/databases/backups_${process.env.DB}`.trim()
 
 const getEntries = () => {
   const entries = fs.readdirSync(BACKUPS_DIR)
@@ -61,7 +61,7 @@ const uploadNewestEntry = async (storage: Storage, newestEntry: string) => {
   const fileStream: ReadStream = fs.createReadStream(filePath)
   const fileBuffer: Buffer = await new Promise((resolve, reject) => {
     const chunks: Buffer[] = []
-    fileStream.on('data', (chunk: Buffer) => chunks.push(chunk))
+    fileStream.on('data', (chunk: Buffer | string) => chunks.push(chunk as Buffer))
     fileStream.on('end', () => resolve(Buffer.concat(chunks)))
     fileStream.on('error', reject)
   })
@@ -81,7 +81,7 @@ const deleteFiles = async (storage: Storage, entriesToDelete: string[]) => {
   console.log('[LOG]: Successfully deleted files beyond the retention time from MEGA Drive.')
 }
 
-;(async () => {
+try {
   const { newestEntry, entriesToDelete } = getEntries()
 
   const storage = await prepareStorage()
@@ -91,8 +91,8 @@ const deleteFiles = async (storage: Storage, entriesToDelete: string[]) => {
 
   await storage.close()
   process.exit(0)
-})().catch(error => {
+} catch (error) {
   if (error instanceof Error) console.error(`[ERR]: ${error.message}`)
   else console.error(`[ERR]: ${error}`)
   process.exit(1)
-})
+}

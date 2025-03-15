@@ -28,3 +28,4 @@ pnpm run upload:mysql
 find $UPLOAD -type f -mmin +$((RETENTION_HOURS * 60)) -name 'mysql_backup_*.tar.gz' -delete
 
 echo "MySQL backup completed successfully."
+echo ""

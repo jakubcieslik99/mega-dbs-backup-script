@@ -4,7 +4,7 @@ import { ReadStream } from 'fs'
 import { Storage } from 'megajs'
 
 dotenv.config({ path: './.env' })
-const BACKUPS_DIR = `./data/databases/backups_${process.env.DB}`.trim()
+const BACKUPS_DIR = `./backups_${process.env.DB}`.trim()
 
 const getEntries = () => {
   const entries = fs.readdirSync(BACKUPS_DIR)

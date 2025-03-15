@@ -37,6 +37,11 @@ All information about environment variables can be found in the `Environment Var
 - Run the script manually
 
 ```bash
+  sudo chmod +x mega-dbs-backup-script/*.*
+  sudo chmod +x mega-dbs-backup-script/scripts/*.*
+```
+
+```bash
   ./backup.sh
 ```
 

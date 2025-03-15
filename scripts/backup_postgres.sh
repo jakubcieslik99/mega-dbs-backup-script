@@ -32,3 +32,4 @@ find $UPLOAD -type f -mmin +$((RETENTION_HOURS * 60)) -name 'postgres_backup_*.t
 unset PGPASSWORD
 
 echo "PostgreSQL backup completed successfully."
+echo ""

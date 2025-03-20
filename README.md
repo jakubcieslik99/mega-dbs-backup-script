@@ -65,20 +65,25 @@ All information about environment variables can be found in the `Environment Var
 
 ⚙️ To run the script, you will need to add the following environment variables to your .env file
 
+Vars:
+
 - `MONGO_USER`
-- `MONGO_PASSWORD`
 
 - `MYSQL_USER`
-- `MYSQL_PASSWORD`
 
 - `POSTGRES_USER`
-- `POSTGRES_PASSWORD`
 
 - `PROJECT_NAME`
 - `RETENTION_HOURS`
 - `MEGA_EMAIL`
-- `MEGA_PASSWORD`
 - `MEGA_USER_AGENT`
+
+Secrets:
+
+- `MONGO_PASSWORD`
+- `MYSQL_PASSWORD`
+- `POSTGRES_PASSWORD`
+- `MEGA_PASSWORD`
 
 ( ℹ️ - sample .env config file is provided in the script directory under the name `.env.sample` )
 

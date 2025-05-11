@@ -1,6 +1,6 @@
 {
   "name": "mega-dbs-backup-script",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "description": "MEGA Drive dockerized databases backup upload script",
   "type": "module",
   "main": "index.ts",
@@ -8,26 +8,30 @@
     "upload:mongo": "cross-env DB=mongo tsx ./scripts/index.ts",
     "upload:mysql": "cross-env DB=mysql tsx ./scripts/index.ts",
     "upload:postgres": "cross-env DB=postgres tsx ./scripts/index.ts",
-    "lint": "eslint . --ignore-path .gitignore --ext .js,.ts",
+    "lint": "eslint .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts)\"",
     "update:all": "corepack up && pnpm update"
   },
   "author": "Jakub Cieślik",
   "license": "MIT",
-  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "dotenv": "^16.4.7",
-    "megajs": "^1.3.6",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "dotenv": "^16.5.0",
+    "megajs": "^1.3.7",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/node": "^22.13.11",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "8.57.1",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.5.3"
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.26.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/node": "^22.15.17",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.0"
   }
 }
